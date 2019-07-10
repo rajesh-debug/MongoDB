@@ -25,7 +25,7 @@ public class MongoDBMapReduce {
 			MongoCollection<Document> collection = db.getCollection("Persons");
 
 			// Delete all documents from collection.
-			collection.deleteMany(Filters.or(Filters.eq("name", "Awadh"), Filters.eq("name", "Vinita")));
+			collection.deleteMany(Filters.or(Filters.eq("name", "Awadh"), Filters.eq("name", "Vinita"), Filters.eq("name", "Rajesh")));
 
 			List<Document> persons = new ArrayList<Document>();
 			persons.add(new Document("name", "Awadh").append("age", 61));
