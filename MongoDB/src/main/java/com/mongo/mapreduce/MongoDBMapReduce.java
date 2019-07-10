@@ -30,7 +30,7 @@ public class MongoDBMapReduce {
 			List<Document> persons = new ArrayList<Document>();
 			persons.add(new Document("name", "Awadh").append("age", 61));
 			persons.add(new Document("name", "Vinita").append("age", 25));
-			persons.add(new Document("name", "Awadh").append("age", 30));
+			persons.add(new Document("name", "Rajesh").append("age", 30));
 
 			// insert multiple records in mongo db.
 			collection.insertMany(persons);
@@ -43,7 +43,7 @@ public class MongoDBMapReduce {
 			}
 
 			// map function to categorize young guys only
-			String youngMap = "function () {" + "var criteria;" + "if ( this.age <= 60 ) {" + "criteria = 'young';"
+			String youngMap = "function () {" + "var criteria;" + "if ( this.age <= 30 ) {" + "criteria = 'young';"
 					+ "emit(criteria, this.age);" + "}" + "};";
 
 			// reduce function to add all the age and calculate the average age
