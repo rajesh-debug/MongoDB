@@ -1,0 +1,14 @@
+https://docs.mongodb.com/manual/tutorial/install-mongodb-on-os-x/
+
+export M2_HOME=/usr/local/apache-maven/apache-maven-3.6.1
+export M2=$M2_HOME/bin
+MAVEN_OPTS="-Xms512 -Xmx1024m"
+export PATH=$M2:$PATH
+
+#Command to start mongo db
+mongod --config /usr/local/etc/mongod.conf
+brew services start mongodb-community@4.0
+
+
+#Install brew on mac
+https://brew.sh/#install

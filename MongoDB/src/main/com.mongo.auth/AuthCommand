@@ -1,0 +1,20 @@
+> use authDB
+switched to db authDB
+> 
+> db.createUser(
+  {
+    user: "admin",
+    pwd: "admin",
+    roles: [ { role: "readWrite", db: "authDB" }]
+  }
+)
+
+Successfully added user: {
+	"user" : "admin",
+	"roles" : [
+		{
+			"role" : "readWrite",
+			"db" : "authDB"
+		}
+	]
+}
